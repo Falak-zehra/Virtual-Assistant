@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          background-color: black;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+    
+        .container {
+          background: linear-gradient(135deg, #1f1c2c, #928DAB);
+          padding: 40px;
+          border-radius: 15px;
+          box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+          text-align: center;
+          width: 320px;
+        }
+    
+        h2 {
+          margin-bottom: 20px;
+          color: #e0d7ff;
+        }
+    
+        input {
+          width: 100%;
+          padding: 10px;
+          margin: 10px 0;
+          border: none;
+          border-radius: 8px;
+          outline: none;
+          font-size: 16px;
+        }
+    
+        button {
+          background: linear-gradient(to right, #4b0082, #8a2be2);
+          color: white;
+          padding: 10px 20px;
+          font-size: 16px;
+          border: none;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background 0.3s;
+          width: 100%;
+        }
+    
+        button:hover {
+          background: linear-gradient(to right, #6a0dad, #9a4dff);
+        }
+    
+        a {
+          color: #dcd6f7;
+          text-decoration: none;
+        }
+    
+        a:hover {
+          text-decoration: underline;
+        }
+      </style>
+
+
+</head>
+<body>
+    <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore-compat.js"></script>
+
+
+  <script>
+    
+   
+    const firebaseConfig = {
+      apiKey: "AIzaSyD51ZqUejMr8x1zTHOk-QxaUTXLRHkAdU8",
+      authDomain: "virtual-assistant-c85f3.firebaseapp.com",
+      projectId: "virtual-assistant-c85f3",
+      storageBucket: "virtual-assistant-c85f3.firebasestorage.app",
+      messagingSenderId: "348716877647",
+      appId: "1:348716877647:web:bf4684220d57ccbb7a673a",
+      measurementId: "G-1HX86P2L15"
+    };
+  
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    
+    const db = app.firestore();
+   const auth = app.auth();
+
+  
+    
+  </script>
+  <script src="script.js"></script>
+  <div class="container">
+    <h2>Sign In to Eva</h2>
+    
+      <input type="email" id="loginemail" placeholder="Email" required />
+      <input type="password" id="loginpassword" placeholder="Password" required />
+      <br>
+        <div id="mess"></div>
+      <button type="submit" onclick="signin(event)">Sign In</button>
+      <p id="error-message" class="error"></p>
+   
+    <p><a href="signup.html">Don't have an account? Sign Up</a></p>
+  </div>
+    
+    
+</body>
+</html>

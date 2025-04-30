@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eva, My virtual assistant</title>
+    <link rel="shortcut icon" href="logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <img src="logo.jpg" alt="logo" id="logo">
+    <h1>I'm <span id = "name">Eva</span>, Your <span id="va">Virtual Assistant</span></h1>
+    <img src="voice.gif" alt="voice" id="voice">
+    <button id="btn"><img src="mic.svg" alt="mic" ><span id="content">Click here to  talk to me</span> </button>
+    <script src="script.js" defer></script>
+    <div id="chatWindow"></div>
+      <div class="text-input-area">
+        <input type="text" id="userTextInput" placeholder="Type your message here...">
+        <button onclick="handleUserInput()">Send</button>
+      </div>
+    </div>
+    <div class="auth-links">
+        <a href="signin.html" >Sign In</a> | <a href="signup.html" >Sign Up</a> |  <a  onclick="signout()">Sign Out</a>
+      </div>
+      
+
+      <footer>
+        <div id="signoutsuccess"></div>
+      </footer>
+      <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore-compat.js"></script>
+    
+    
+      <script>
+        
+       
+        const firebaseConfig = {
+          apiKey: "AIzaSyD51ZqUejMr8x1zTHOk-QxaUTXLRHkAdU8",
+          authDomain: "virtual-assistant-c85f3.firebaseapp.com",
+          projectId: "virtual-assistant-c85f3",
+          storageBucket: "virtual-assistant-c85f3.firebasestorage.app",
+          messagingSenderId: "348716877647",
+          appId: "1:348716877647:web:bf4684220d57ccbb7a673a",
+          measurementId: "G-1HX86P2L15"
+        };
+      
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        
+        const db = app.firestore();
+       const auth = app.auth();
+    
+      
+        
+      </script>
+      <script src="script.js"></script>
+
+
+</body>
+</html>

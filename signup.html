@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffe3db;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .container h2 {
+      margin-bottom: 1rem;
+    }
+
+    .container input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .container button {
+     display: block;
+     margin: 1rem auto 0;
+      padding:  10px;
+      background-color: #ff7e6b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      
+    }
+
+    .container button:hover {
+      background-color: #ff5233;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+
+
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <div id="message"></div>
+    <button onclick="signup(event)">Sign Up</button>
+    <p id="error-message" class="error"></p>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore-compat.js"></script>
+
+
+  <script>
+    
+   
+    const firebaseConfig = {
+      apiKey: "AIzaSyD51ZqUejMr8x1zTHOk-QxaUTXLRHkAdU8",
+      authDomain: "virtual-assistant-c85f3.firebaseapp.com",
+      projectId: "virtual-assistant-c85f3",
+      storageBucket: "virtual-assistant-c85f3.firebasestorage.app",
+      messagingSenderId: "348716877647",
+      appId: "1:348716877647:web:bf4684220d57ccbb7a673a",
+      measurementId: "G-1HX86P2L15"
+    };
+  
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    
+    const db = app.firestore();
+   const auth = app.auth();
+
+  
+    
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
